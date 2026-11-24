@@ -63,6 +63,98 @@ a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:poi
   .btn:not(.ghost),.after-card a{forced-color-adjust:auto;-webkit-text-fill-color:currentColor}
   .btn:not(.ghost) *,.after-card a *{-webkit-text-fill-color:currentColor}
 }
+
+/* V3.2 — responsive typography and readability; brand colours unchanged */
+:root{
+  --type-body:clamp(1rem,.97rem + .12vw,1.0625rem);
+  --type-intro:clamp(1.0625rem,1.02rem + .2vw,1.125rem);
+  --type-h1:clamp(2.75rem,4.45vw,4.5rem);
+  --type-h2:clamp(2rem,3.05vw,3rem);
+  --type-h3:clamp(1.375rem,1.8vw,1.875rem);
+  --type-nav:.875rem;
+  --type-cta:.9375rem;
+  --type-label:.75rem;
+  --type-caption:.8125rem;
+}
+body{font-size:var(--type-body);line-height:1.65}
+.hero h1{font-size:var(--type-h1);line-height:1.08;letter-spacing:-.035em;overflow-wrap:normal}
+.hero .intro{font-size:var(--type-intro);line-height:1.65;max-width:56ch}
+.section-head h2,.cta-layout h2{font-size:var(--type-h2);line-height:1.16;letter-spacing:-.03em}
+.section-head p,.diagnosis-right p,.process-card p,.treatment-card p,.after-card p,.cta-layout .right p,.approach-foot p{font-size:1rem;line-height:1.65}
+.section-head p{max-width:38ch}
+.diagnosis-right h3,.process-card h3,.treatment-card h3,.after-card h3,.before-card h3,.type-tab strong{font-size:var(--type-h3);line-height:1.25;letter-spacing:-.025em;font-weight:700}
+.process-card p{max-width:42ch}
+.navlinks a{font-size:var(--type-nav);font-weight:600;letter-spacing:0}
+.navlinks{gap:clamp(1rem,2vw,1.75rem)}
+.btn,.after-card a,.text-link,.approach-foot a{font-size:var(--type-cta);font-weight:700;line-height:1.4;letter-spacing:0}
+.btn,.after-card a{min-height:52px;gap:16px;white-space:normal;overflow-wrap:normal}
+.btn .arrow,.text-link span,.after-card a span{font-size:1.125rem;flex-shrink:0}
+.after-card a span{margin-left:0}
+.after-card a{align-items:center}
+.label,.hero .label,.treatment-index,.ed-small,.type-tab small{font-size:var(--type-label);line-height:1.5;letter-spacing:.075em}
+.concept-banner{font-size:.75rem;line-height:1.5;letter-spacing:.045em}
+.brand-sub{font-size:.6875rem;letter-spacing:.06em;line-height:1.35}
+.top-contact{font-size:.8125rem;line-height:1.4}.top-contact strong{font-size:1rem;letter-spacing:0}
+.insight h3{font-size:.875rem;line-height:1.3;letter-spacing:.035em}
+.insight p{font-size:var(--type-caption);line-height:1.5}
+.hero-mark,.photo-caption .small,.photo-index,.photo-caption .label{font-size:var(--type-caption);line-height:1.45;letter-spacing:.035em}
+.diag-note{font-size:var(--type-caption)!important;line-height:1.55!important}
+.audit-label,.audit-label .tag{font-size:var(--type-label);line-height:1.4;letter-spacing:.065em}
+.audit-label{flex-wrap:wrap}
+.audit-note,.footer-end{font-size:var(--type-caption);line-height:1.6;letter-spacing:.015em}
+.footer .foottext,.footer-links{font-size:.875rem;line-height:1.6}
+.footer-links{flex-wrap:wrap;white-space:normal}
+.cta-layout .right p{max-width:38ch}
+.header-inner,.top-right,.navlinks,.hero-copy,.section-head>*,.diagnosis-grid>*,.process-card,.treatment-card,.cta-layout>*{min-width:0}
+.header-inner{gap:16px}
+.hero-actions{gap:18px}
+.photo-caption .small{max-width:180px}
+@media(max-width:1100px){
+  .navlinks{position:absolute;left:0;right:0;top:100%;background:var(--ivory);padding:20px 30px 32px;display:none;flex-direction:column;align-items:stretch;border-top:1px solid #d5d9d0;box-shadow:0 15px 30px rgba(23,43,41,.09)}
+  .navlinks.open{display:flex}
+  .navlinks a{display:block;padding:10px 0}
+  .mobile-menu{display:flex;flex-shrink:0}
+  .top-right>.btn{display:none}
+}
+@media(max-width:960px){
+  :root{--type-h1:clamp(2.5rem,5.3vw,3rem);--type-h2:clamp(2rem,4vw,2.25rem);--type-h3:1.5rem;--type-body:1rem;--type-intro:1.0625rem}
+  .section-head{gap:28px}
+  .process-card{padding:28px 22px}
+  .insight:not(:first-child){padding-left:18px}
+  .footer-grid{flex-wrap:wrap}
+}
+@media(max-width:680px){
+  :root{--type-h1:clamp(2.25rem,8.8vw,2.5rem);--type-h2:clamp(1.75rem,6.5vw,2rem);--type-h3:1.375rem;--type-caption:.75rem}
+  .hero h1{margin:22px 0;line-height:1.12}
+  .hero .intro{font-size:1.0625rem}
+  .section-head h2,.cta-layout h2{line-height:1.2}
+  .section-head p,.process-card p,.treatment-card p,.diagnosis-right p,.after-card p,.cta-layout .right p,.approach-foot p{font-size:1rem;line-height:1.65}
+  .navlinks{padding:16px 20px 24px}
+  .navlinks a{font-size:1rem}
+  .brand-name{font-size:1.375rem}
+  .brand-sub{font-size:.625rem;letter-spacing:.03em}
+  .brand{gap:9px}
+  .hero-actions{align-items:flex-start}
+  .btn,.after-card a{max-width:100%;padding:14px 17px;gap:12px}
+  .photo-caption{align-items:flex-start;flex-wrap:wrap;gap:8px}
+  .photo-caption .small{max-width:none;text-align:left}
+  .insight:not(:first-child){padding-left:0}
+  .diagnosis-left{padding:18px 20px}
+  .type-tab{gap:12px}
+  .type-tab strong{font-size:var(--type-h3)}
+  .diagnosis-right{padding:32px 24px;min-height:0;gap:24px}
+  .diagnosis-right h3{margin:12px 0}
+  .diag-note{margin-top:8px}
+  .audit-cell{padding:22px 16px}
+  .before-card,.after-card{padding:24px 20px}
+  .footer-links{gap:14px}
+}
+@media(max-width:360px){
+  .hero h1{font-size:2rem}
+  .brand-symbol{width:29px;height:26px}
+  .brand-sub{letter-spacing:0}
+  .header-inner{gap:8px}
+}
 </style>
 </head>
 <body>
