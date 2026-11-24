@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
+<meta name="color-scheme" content="only light">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <title>A2Z Estates | Damp Proofing & DPC — Independent V3 Concept</title>
 <meta name="description" content="Independent, unsolicited premium website redesign study for A2Z Estates' Damp & DPC service. Not affiliated with or endorsed by A2Z Estates.">
@@ -41,6 +41,28 @@ a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:poi
 .audit{background:#fff}.audit-cell{min-height:330px}.after-card h3{font-size:29px}.after-card{background:#F7F8FA;border-top:3px solid #D7171F}.bottom-cta{background:#1D2634;color:#fff;padding:64px 0}.cta-layout{border:0;padding:0;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr)}.cta-layout .label{color:#FFCC00}.cta-layout .right p{color:#E2E7EB}.footer{border-top:1px solid #465260}.footer .brand-name strong{color:#FFCC00}
 @media(max-width:960px){.header-inner{height:79px}.hero h1{font-size:clamp(38px,5.7vw,65px)}.hero-copy{padding:65px 30px 75px}.hero-visual{min-height:520px}.section{padding-top:75px;padding-bottom:70px}.section-head h2{font-size:45px}.process-card{padding:28px 22px}.treatment-card{padding:26px}}
 @media(max-width:680px){.header-inner{height:72px}.hero{min-height:0}.hero-copy{padding:43px 20px 46px}.hero h1{font-size:clamp(39px,10vw,60px);margin:22px 0}.hero .intro{font-size:14px}.hero-visual{min-height:340px;max-height:430px}.section{padding-top:58px;padding-bottom:56px}.section-head h2,.cta-layout h2{font-size:clamp(34px,8vw,45px)}.treatment-grid{grid-template-columns:1fr;gap:12px}.treatment-card{padding:24px;min-height:0}.process-card{padding:25px}.audit-cell{min-height:0}.cta-layout{grid-template-columns:1fr;gap:24px}.bottom-cta{padding:55px 0}.hero-actions .btn{white-space:normal}.photo-caption .label{font-size:10px}}
+
+/* V3.1 — stable branded yellow CTA contrast in light and dark environments */
+:root{color-scheme:only light;--on-yellow:#000000}
+.btn:not(.ghost),.after-card a,
+.btn:not(.ghost):link,.btn:not(.ghost):visited,.btn:not(.ghost):hover,.btn:not(.ghost):focus,.btn:not(.ghost):focus-visible,.btn:not(.ghost):active,
+.after-card a:link,.after-card a:visited,.after-card a:hover,.after-card a:focus,.after-card a:focus-visible,.after-card a:active{
+  color:var(--on-yellow)!important;
+  -webkit-text-fill-color:var(--on-yellow);
+  background-color:var(--button)!important;
+  border-color:var(--button)!important;
+}
+.btn:not(.ghost):hover,.btn:not(.ghost):active,.after-card a:hover,.after-card a:active{
+  background-color:var(--yellow)!important;border-color:var(--yellow)!important;
+}
+.btn:not(.ghost) *,.after-card a *{color:var(--on-yellow)!important;-webkit-text-fill-color:var(--on-yellow)}
+.btn:not(.ghost) svg,.after-card a svg{color:var(--on-yellow)!important}
+.btn:not(.ghost):focus-visible,.after-card a:focus-visible{outline:3px solid #D7171F;outline-offset:4px}
+::selection{background:#FFCC00;color:#000000}
+@media(forced-colors:active){
+  .btn:not(.ghost),.after-card a{forced-color-adjust:auto;-webkit-text-fill-color:currentColor}
+  .btn:not(.ghost) *,.after-card a *{-webkit-text-fill-color:currentColor}
+}
 </style>
 </head>
 <body>
